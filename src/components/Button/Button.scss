@@ -42,3 +42,19 @@
             #fe2c55;
     }
 }
+
+.pramiry {
+    color: white;
+    background-color: #fe2c55;
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            #fe2c55;
+    }
+}
+.outline {
+    color: white;
+}
