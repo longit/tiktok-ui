@@ -72,6 +72,9 @@ export default function Header() {
                     <Button className="btn primary" taget="_blank">
                         Login
                     </Button>
+                    <Button className="btn btn-text" taget="_blank">
+                        <FontAwesomeIcon icon={faSpinner} />
+                    </Button>
                 </div>
             </div>
         </header>
