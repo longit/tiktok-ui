@@ -66,12 +66,10 @@ export default function Header() {
                     </Tippy>
                 </div>
                 <div className="b__action">
-                    <Button
-                        primary
-                        to="/login"
-                        className="btn-login"
-                        taget="_blank"
-                    >
+                    <Button className="btn btn-text" taget="_blank">
+                        Upload
+                    </Button>
+                    <Button className="btn primary" taget="_blank">
                         Login
                     </Button>
                 </div>
