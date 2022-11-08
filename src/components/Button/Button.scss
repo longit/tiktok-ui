@@ -69,3 +69,14 @@
         background-color: rgba(22, 24, 35, 0.03);
     }
 }
+.btn-more {
+    font-size: 20px;
+    margin-left: 28px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0 10px 0 0;
+    &:hover {
+        background: transparent;
+    }
+}

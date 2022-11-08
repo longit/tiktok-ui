@@ -1,17 +1,39 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faSpinner,
     faMagnifyingGlass,
+    faEllipsisVertical,
+    faEarthAsia,
+    faCircleQuestion,
+    faKeyboard,
 } from '@fortawesome/free-solid-svg-icons';
+import { Wapper as PopperWapper } from '../../../Popper';
+
 import './Header.scss';
 import logo from '../../../../assets/images/logo.svg';
-import Tippy from '@tippyjs/react/headless';
-import { Wapper as PopperWapper } from '../../../Popper';
 import AccountItem from '../../../AccountItem';
 import Button from '../../../Button';
+import Menu from '../../../Popper/Menu';
+
+const MENU_ITEMS = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        title: 'English',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        title: 'Feedback end help',
+        to: '/feedback',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        title: 'Keyboarch shortcuts',
+    },
+];
 
 export default function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -72,9 +94,11 @@ export default function Header() {
                     <Button className="btn primary" taget="_blank">
                         Login
                     </Button>
-                    <Button className="btn btn-text" taget="_blank">
-                        <FontAwesomeIcon icon={faSpinner} />
-                    </Button>
+                    <Menu items={MENU_ITEMS}>
+                        <button className="btn-more" taget="_blank">
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>

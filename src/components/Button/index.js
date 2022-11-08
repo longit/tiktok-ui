@@ -27,7 +27,7 @@ export default function Button({
         Comp = 'a';
     }
     return (
-        <Comp className="btn" {...props}>
+        <Comp className="btns-link" {...props}>
             <span>{children}</span>
         </Comp>
     );
