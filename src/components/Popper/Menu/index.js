@@ -1,24 +1,53 @@
 import React from 'react';
+import { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import { Wapper as PopperWapper } from '../../../components/Popper';
 
-import './Menu.scss';
 import MenuItems from './MenuItem';
+import Header from './Header';
+import './Menu.scss';
 
 export default function Menu({ children, items = [] }) {
+    const [history, setHistory] = useState([{ data: items }]);
+    const current = history[history.length - 1];
     const renderItems = () => {
-        return items.map((item, index) => (
-            <MenuItems key={index} data={item} />
-        ));
+        return current.data.map((item, index) => {
+            const isParent = !!item.children;
+            return (
+                <MenuItems
+                    key={index}
+                    data={item}
+                    onClick={() => {
+                        if (isParent) {
+                            setHistory((prev) => [...prev, item.children]);
+                        }
+                    }}
+                />
+            );
+        });
     };
     return (
         <Tippy
-            visible
+            delay={[0, 100]}
             interactive
+            visible
             placement="bottom-end"
             render={(attrs) => (
                 <div className="menu-list" tabIndex="-1" {...attrs}>
-                    <PopperWapper>{renderItems()}</PopperWapper>
+                    <PopperWapper>
+                        {history.length > 1 && (
+                            <Header
+                                title="Language"
+                                onBack={() => {
+                                    setHistory((prev) =>
+                                        prev.slice(0, prev.length - 1),
+                                    );
+                                }}
+                            />
+                        )}
+
+                        {renderItems()}
+                    </PopperWapper>
                 </div>
             )}
         >
