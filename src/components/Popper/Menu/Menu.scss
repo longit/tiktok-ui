@@ -15,6 +15,12 @@
             text-decoration: none;
             background-color: rgba(22, 24, 35, 0.03);
         }
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
+        .b__icon {
+            margin-right: 6px;
+        }
     }
 }
 .header {

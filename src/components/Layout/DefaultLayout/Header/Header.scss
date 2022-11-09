@@ -103,4 +103,25 @@ h1 {
             }
         }
     }
+    .b__action {
+        display: flex;
+        align-items: center;
+        .user-avatar {
+            border-radius: 100%;
+            margin-left: 10px;
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .b__login {
+            .btn-action {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                font-size: 24px;
+            }
+        }
+    }
 }

@@ -30,7 +30,6 @@ export default function Menu({ children, items = [] }) {
         <Tippy
             delay={[0, 100]}
             interactive
-            visible
             placement="bottom-end"
             render={(attrs) => (
                 <div className="menu-list" tabIndex="-1" {...attrs}>
@@ -50,6 +49,7 @@ export default function Menu({ children, items = [] }) {
                     </PopperWapper>
                 </div>
             )}
+            onHidden={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
