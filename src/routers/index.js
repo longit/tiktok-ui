@@ -14,7 +14,7 @@ const publicRouters = [
         component: Following,
     },
     {
-        path: '/profile',
+        path: '/@:Population',
         component: Profile,
     },
     {
