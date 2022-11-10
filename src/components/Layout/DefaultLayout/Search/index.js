@@ -26,7 +26,7 @@ function Search() {
         setLoading(true);
 
         fetch(
-            'https://datausa.io/api/data?drilldowns=Nation&measures=Population',
+            'https://tiktok.fullstack.edu.vn/api/users/search?q=hoa&type=less',
         )
             .then((res) => res.json())
             .then((res) => {
