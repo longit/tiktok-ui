@@ -11,10 +11,12 @@ export default function AccountItem({ data }) {
             <div className="info">
                 <p className="acc_name">
                     <span>{data.full_name}</span>
-                    <FontAwesomeIcon
-                        className="icon_check"
-                        icon={faCheckCircle}
-                    />
+                    {data.tick && (
+                        <FontAwesomeIcon
+                            className="icon_check"
+                            icon={faCheckCircle}
+                        />
+                    )}
                 </p>
                 <span className="acc_username">{data.nickname}</span>
             </div>
