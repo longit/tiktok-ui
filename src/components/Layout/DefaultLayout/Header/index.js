@@ -60,7 +60,7 @@ export default function Header() {
     const [searchResult, setSearchResult] = useState([]);
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([]);
+            setSearchResult([1, 1, 1, 1]);
         }, 0);
     }, []);
 
@@ -105,7 +105,7 @@ export default function Header() {
                 </div>
                 <div className="b__form--search">
                     <HeadlessTippy
-                        interactive={true}
+                        interactive
                         visible={searchResult.length > 0}
                         render={(attrs) => (
                             <div
