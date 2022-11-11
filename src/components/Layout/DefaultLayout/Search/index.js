@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { Wapper as PopperWapper } from '../../../Popper';
 import AccountItem from '../../../AccountItem';
+import { useDebounce } from '../../../../hook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
@@ -17,17 +18,19 @@ function Search() {
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
 
+    //Dùng Debounced khi search ký tự cuối cùng thì mới bắn sang API gọi 1 lần search
+    const debounced = useDebounce(searchValue, 500);
+
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!searchValue.trim()) {
+        if (!debounced.trim()) {
+            setSearchResult([]);
             return;
         }
         setLoading(true);
 
-        fetch(
-            'https://tiktok.fullstack.edu.vn/api/users/search?q=hoa&type=less',
-        )
+        fetch('https://tiktok.fullstack.edu.vn/api/users/search?q=h&type=less')
             .then((res) => res.json())
             .then((res) => {
                 setSearchResult(res.data);
@@ -36,7 +39,7 @@ function Search() {
             .catch(() => {
                 setLoading(false);
             });
-    }, [searchValue]);
+    }, [debounced]);
 
     const handleClear = () => {
         setSearchValue('');
