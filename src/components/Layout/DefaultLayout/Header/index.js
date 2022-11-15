@@ -1,6 +1,6 @@
 import React from 'react';
 import Tippy from '@tippyjs/react';
-
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faEllipsisVertical,
@@ -13,6 +13,7 @@ import {
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
+import routesConfig from '../../../../config/routes';
 
 import './Header.scss';
 import logo from '../../../../assets/images/logo.svg';
@@ -88,7 +89,9 @@ export default function Header() {
         <header className="wapper">
             <div className="container-wapper">
                 <div className="logo">
-                    <img src={logo} alt="title logo" />
+                    <Link className="link-logo" to={routesConfig.home}>
+                        <img src={logo} alt="title logo" />
+                    </Link>
                 </div>
                 <div className="b__form--search">
                     {/* Search form */}

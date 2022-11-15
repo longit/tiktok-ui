@@ -17,7 +17,7 @@
         z-index: 1;
         margin: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         position: relative;
         &::after {
             content: '';
@@ -34,12 +34,14 @@
         border-radius: 92px;
     }
     input {
+        width: 100%;
         font-size: 16px;
         color: #000;
         background-color: transparent;
         outline: none;
         border: none;
         caret-color: red;
+        padding-right: 15px;
         &:focus {
             outline: none;
         }
@@ -57,6 +59,7 @@
         background-color: transparent;
         color: rgba(22, 24, 35, 0.34);
         cursor: pointer;
+        margin-right: 10px;
     }
     .loading {
         animation: spinner 0.8s linear infinite;
@@ -71,7 +74,7 @@
     }
     .search-btn {
         padding: 11px 16px 11px 12px;
-        margin: -9px;
+        margin: 0;
         font-size: 0;
         cursor: pointer;
         outline: none;

@@ -3,6 +3,8 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import { Wapper as PopperWapper } from '../../../Popper';
 import AccountItem from '../../../AccountItem';
 import { useDebounce } from '../../../../hook';
+
+import request from '../../../../utils/request';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
@@ -30,10 +32,16 @@ function Search() {
         }
         setLoading(true);
 
-        fetch('https://tiktok.fullstack.edu.vn/api/users/search?q=h&type=less')
-            .then((res) => res.json())
+        request
+            .get('users/search', {
+                params: {
+                    q: debounced,
+                    type: 'less',
+                },
+            })
             .then((res) => {
-                setSearchResult(res.data);
+                // console.log(res.data.data);
+                setSearchResult(res.data.data);
                 setLoading(false);
             })
             .catch(() => {
