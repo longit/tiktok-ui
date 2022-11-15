@@ -1,0 +1,42 @@
+.menu-list {
+    width: 224px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 /12%) 0px 2px 12px;
+    border-radius: 8px;
+    .menu-item {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        padding: 10px;
+        font-weight: 600;
+        color: #333;
+        &:hover {
+            text-decoration: none;
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
+        .b__icon {
+            margin-right: 6px;
+        }
+    }
+}
+.header {
+    position: relative;
+    height: 50px;
+}
+.btn-back {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
