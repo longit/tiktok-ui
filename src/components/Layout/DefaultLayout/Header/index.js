@@ -17,7 +17,7 @@ export default function Header() {
     const [searchResult, setSearchResult] = useState([]);
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([]);
+            setSearchResult([1, 2, 4]);
         }, 0);
     }, []);
     return (
