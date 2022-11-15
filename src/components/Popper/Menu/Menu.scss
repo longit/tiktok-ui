@@ -23,9 +23,18 @@
         }
     }
 }
+.pop_wapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    .b__menuScroll {
+        overflow-y: auto; 
+    }
+}
 .header {
     position: relative;
-    height: 50px;
+    height: 50px; 
+    flex-shrink: 0;
 }
 .btn-back {
     width: 50px;

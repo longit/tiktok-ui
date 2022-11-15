@@ -46,7 +46,9 @@ export default function Menu({ children, items = [], hideOnClick = false }) {
                             />
                         )}
 
-                        {renderItems()}
+                        <div className="b__menuScroll">
+                            {renderItems()}
+                        </div>
                     </PopperWapper>
                 </div>
             )}

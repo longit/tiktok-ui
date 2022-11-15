@@ -13,13 +13,13 @@ import {
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
-import routesConfig from '../../../../config/routes';
+import routesConfig from '../../../config/routes';
 
 import './Header.scss';
-import logo from '../../../../assets/images/logo.svg';
-import Button from '../../../Button';
-import Menu from '../../../Popper/Menu';
-import Image from '../../../Images';
+import logo from '../../../assets/images/logo.svg';
+import Button from '../../../components/Button';
+import Menu from '../../../components/Popper/Menu';
+import Image from '../../../components/Images';
 import Search from '../Search';
 const currentUSer = true;
 const MENU_ITEMS = [
@@ -37,6 +37,79 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Tiếng việt',
                 },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+
             ],
         },
     },

@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
-import { Wapper as PopperWapper } from '../../../Popper';
-import AccountItem from '../../../AccountItem';
-import { useDebounce } from '../../../../hook';
+import { Wapper as PopperWapper } from '../../../components/Popper';
+import AccountItem from '../../../components/AccountItem';
+import { useDebounce } from '../../../hook';
 
-import request from '../../../../utils/request';
+import request from '../../../utils/request';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
