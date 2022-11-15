@@ -7,7 +7,7 @@ import MenuItems from './MenuItem';
 import Header from './Header';
 import './Menu.scss';
 
-export default function Menu({ children, items = [] }) {
+export default function Menu({ children, items = [], hideOnClick = false }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
     const renderItems = () => {
@@ -30,6 +30,7 @@ export default function Menu({ children, items = [] }) {
         <Tippy
             delay={[0, 100]}
             interactive
+            hideOnClick={hideOnClick}
             placement="bottom-end"
             render={(attrs) => (
                 <div className="menu-list" tabIndex="-1" {...attrs}>

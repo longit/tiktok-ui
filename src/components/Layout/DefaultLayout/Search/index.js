@@ -97,7 +97,11 @@ function Search() {
                 {loading && (
                     <FontAwesomeIcon className="loading" icon={faSpinner} />
                 )}
-                <button type="submit" className="search-btn">
+                <button
+                    type="submit"
+                    className="search-btn"
+                    onMouseDown={(e) => e.preventDefault()}
+                >
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </form>
