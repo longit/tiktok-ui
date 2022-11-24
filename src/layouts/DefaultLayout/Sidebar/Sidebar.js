@@ -6,7 +6,6 @@ export default function Sidebar() {
     return (
         <aside className="b__sidebar">
             <Menu />
-            <Menu />
         </aside>
     );
 }

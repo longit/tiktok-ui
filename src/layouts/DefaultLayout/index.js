@@ -1,5 +1,5 @@
 import Header from './Header';
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar/Sidebar';
 import './DeafaultLayout.scss';
 
 export default function DefaultLayout({ children }) {
