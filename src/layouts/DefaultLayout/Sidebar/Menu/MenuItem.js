@@ -5,9 +5,9 @@ function MenuItem(title, to, icon) {
     return (
         <div className="menu-items-sidebar">
             <ul>
-                <li><NavLink to="/for-you">For you</NavLink></li>
+                <li><NavLink to="/foryou">For you</NavLink></li>
                 <li><NavLink to="/following">Following</NavLink></li>
-                <li><NavLink to="live">Live</NavLink></li>
+                <li><NavLink to="/live">Live</NavLink></li>
             </ul>
 
 

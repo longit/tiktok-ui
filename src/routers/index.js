@@ -6,6 +6,8 @@ import Following from '../pages/Following/index';
 import Profile from '../pages/Profile/index';
 import Upload from '../pages/Upload/index';
 import Search from '../pages/Search/index';
+import Foryou from '../pages/Foryou/index'
+import Live from '../pages/Live/index';
 const publicRouters = [
     {
         path: routesConfig.home,
@@ -28,6 +30,14 @@ const publicRouters = [
         path: routesConfig.search,
         component: Search,
         layout: null,
+    },
+    {
+        path: routesConfig.foryou,
+        component: Foryou,
+    },
+    {
+        path: routesConfig.live,
+        component: Live,
     },
 ];
 

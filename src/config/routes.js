@@ -4,6 +4,8 @@ const routes = {
     profile: '/@:Population',
     upload: '/upload',
     search: '/search',
+    foryou: '/foryou',
+    live: '/live',
 };
 
 export default routes;
